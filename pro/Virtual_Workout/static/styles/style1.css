@@ -1,0 +1,352 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))
+	,url(https://s3.envato.com/files/6a8ff8c7-41f3-4479-8cd3-dda6d1b24b0d/inline_image_preview.jpg);
+	background-position: center;
+	background-size: cover;
+	clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color: rgba(18, 190, 206, 0.755);
+}
+nav ul li a:hover
+{
+    color: rgba(18, 150, 206, 0.755);
+}
+a
+{
+    text-decoration: none;
+    color: palevioletred;
+    font-size: 28px;
+}
+#login-form
+{
+    display: none;
+}
+.form-box
+{
+    width:380px;
+	height:480px;
+	position:relative;
+	margin:2% auto;
+	background:rgba(234, 228, 228, 0.966);
+	padding:10px;
+    overflow: hidden;
+}
+.button-box
+{
+	width:220px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding:10px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: #F3C693;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 150px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.check-box
+{
+	margin: 30px 10px 34px 0;
+}
+span
+{
+	color:#777;
+	font-size:12px;
+	bottom:68px;
+	position:absolute;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color:white;
+	font-size:15;
+}
+#register
+{
+	left:450px;
+}
+#register input
+{
+	color:rgb(14, 13, 13);
+	font-size: 15;
+}
+/* about us */
+.about .row{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2% 6%;
+}
+.about .row .image{
+	flex: 1 1 40rem;
+	padding: 2rem;
+}
+.about .row .image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.about .row .content{
+	flex: 1 1 40rem;
+	padding: 2rem;
+	text-align: center;
+}
+.about .row .content h1{
+	font-size: 3rem;
+	color: rgba(18, 150, 206, 0.755);
+	margin-bottom: 5rem;
+}
+.about .row .content p{
+	line-height: 1.7;
+	font-size: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+
+/* Services */
+.services{
+	min-height: 100vh;
+	text-align: center;
+	padding: 2% 6%;
+}
+.services h1{
+	font-size: 3.8rem;
+	padding: 0.5rem;
+	display: inline-block;
+	color: rgba(18, 150, 206, 0.755);
+	border-bottom: .3rem;
+	margin-bottom: l.8rem;
+}
+.services .container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.services .container .box{
+	width: 25rem;
+	height: 25rem;
+	margin: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.services .container .box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.services .container .box .info{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transform-origin: bottom;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.services .container .box:hover .info{
+	transform: translate(-50%, -50%) scale(1);
+}
+.services .container .box .info h3{
+	font-size: 3rem;
+	color: rgba(18, 150, 206, 0.755);
+	margin-bottom: 1.3rem;
+}
+.services .container .box .info p{
+	line-height: 2;
+	color: aliceblue;
+	font-size: 1.1rem;
+	padding: 0 1rem;
+	margin-bottom: 1.2rem;
+}
+
+/* Contact */
+.contact{
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3))
+	,url(https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/man-deadlift-1296x728-header.jpg?w=1155&h=1528);
+	min-height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+.contact h1{
+	font-size: 3.8rem;
+	padding: 0.5rem;
+	display: inline-block;
+	color: rgba(18, 150, 206, 0.755);
+	border-bottom: 2.2rem;
+}
+.contact form{
+	padding: 2% 6%;
+	margin: 0 auto;
+}
+.contact form .input_box{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contact form .input_box input,textarea{
+	height: 4rem;
+	width: 39%;
+	background-color: transparent;
+	color: aliceblue;
+	padding: 3rem 1rem;
+	margin: 1rem;
+	font-size: 2rem;
+	border: 1px solid #ddd;
+}
+.contact form textarea{
+	height: 20rem;
+	width: 98%;
+	resize: none;
+	padding: 1rem;
+}
+.btn{
+	padding: 0.5rem 1.5rem;
+	background-color: transparent;
+	border: 0.3rem solid rgba(18, 150, 206, 0.755);
+	color: rgba(18, 150, 206, 0.755);
+	margin-top: 1.8rem;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	font-size: 2rem;
+}
+@media(max-width:1100px){
+	.contact form .input_box input{
+		width: 100%;
+	}
+}
+footer{
+	color: #fff;
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #777;
+	font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+

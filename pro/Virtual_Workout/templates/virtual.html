@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Workout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style1.css') }}">  
+  
+    <!---we had linked our css file----->
+</head>
+
+<body>
+    <div class="full-page" id="home">
+        <div class="navbar">
+            <div><a href='virtual.html'>Virtual Workout</a></div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#home' class="active">Home</a></li>
+                    <li><a href='#about'>About Us</a></li>
+                    <li><a href='#services'>Services</a></li>
+                    <li><a href='#contact'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" 
+                        style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div><font color="#5a8fc6">
+        <h1 align="center"> {{session.email}} Welcome to the World of Virtual Workouts
+                                              
+            <span> {{session.email}} Welcome to the World of Virtual Workouts </span></h1></font>
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form action="{{ url_for('login') }}" id='login' type="text" name="login" class='input-group-login' method="post">
+                    <input type='email' id="email" name="email" class='input-field' placeholder='Email Id' required>
+                    <input type='password'  id="password" name="password"  class='input-field' placeholder='Enter Password' required>
+                   <br>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+
+                <form action="{{ url_for('register') }}" id='register' mame="register" class='input-group-register' onsubmit="return chk()" method="post">
+                    <input type='text' id="fname" name="fname" class='input-field' placeholder='First Name' required>
+                    <input type='text'  id="lname" name="lname" class='input-field' placeholder='Last Name ' required>
+                    <input type='email'  id="email" name="email" class='input-field' placeholder='Email Id' required>
+                    <input type='password'  id="password" name="password" class='input-field' placeholder='Enter Password' required>
+                  <br>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/man-deadlift-1296x728-header.jpg?w=1155&h=1528">
+            </div>
+            <div class="content">
+                <h1>A Word About Us</h1>
+                <p>Our goal is to make health and fitness attainable and approachable. created to help your live a better,happer,healthier life.</p>
+                <p>We believe fitness should be accessible to everyone,everywhere.</p>  
+                <p>Thats why we offer our free virtual frame upper-body Workout the most affordable and effective Workout program for disabled peoples
+                    on the web and helpful exercise information.</p>  
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h1>Our Services</h1>
+        <div class="container">
+            <div class="box">
+                <img src="https://images.pexels.com/photos/7294687/pexels-photo-7294687.jpeg?cs=srgb&dl=pexels-alesia-kozik-7294687.jpg&fm=jpg">
+                <div class="info">
+                    <h3>Barbell-Curls</h3>
+                    <p>Barbell curls are an isolation exercise, meaning that they primarily isolate the biceps brachii.
+                        A barbell curl is a variation of the biceps curl that uses a weighted barbell. Perform barbell 
+                        curls by grabbing a barbell with a shoulder-width supinated grip . Hinge your elbows, and lift 
+                        the barbell toward your chest.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.bestfitne.com/image/cache/images/5be69f61b47c2223e6df62748a0e8310b11acc9e_108-550x550h.jpg">
+                <div class="info">
+                    <h3>Tricep E_Z bar-extension</h3>
+                    <p>The overhead EZ bar tricep extension is an isolation exercise which builds muscle and strength in the triceps. Now, extension 
+                        movements allow for a deeper stretch in the muscle which is great for deep, muscle fiber activation.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.snoridgecrossfit.com/wp-content/uploads/2018/08/SRCF_Press.jpg">
+                <div class="info">
+                    <h3>Shoulder-press</h3>
+                    <p>The shoulder press, also known as the overhead press, is a solid upper-body exercise that uses a collection of muscles to help you
+                         towards achieving your desired body. The shoulder press is great exercise for building muscle and strength of the shoulders, as 
+                         well as improving the shape of the upper body in general.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://bodybuilding-wizard.com/wp-content/uploads/2014/07/front-dumbbell-raise.jpg">
+                <div class="info">
+                    <h3>Fornt-chest Scoop Raise </h3>
+                    <p>The reverse fly is a prime example of a pulling move that will help strengthen your upper body. It does everything
+                         from providing relief for tight chest muscles to adding stability to your shoulder area. Done with light weights, 
+                         it's an accessible exercise for most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Contact Us</h1>
+        <form action="{{ url_for('contact') }}" method="post">    
+            <div class="input_box">
+                <input type="text" name="fname" placeholder="First Name">
+                <input type="text" name="lname" placeholder="last Name">
+            </div>
+            <div class="input_box">
+                <input type="email" name="email" placeholder="your email">
+                <input type="number" name="mobile" placeholder="your contact number">
+            </div>
+            <textarea cols="30" rows="10" name="info" placeholder="Message ..."></textarea>
+            <input type="submit" value="connect us" class="btn">
+        </form>
+    </section>
+
+<!------footer--------->
+<footer>
+    created by &copy; shubham ghure all rights resersved 2022
+</footer>
+
+
+    <script>
+
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+
+    </script>
+
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

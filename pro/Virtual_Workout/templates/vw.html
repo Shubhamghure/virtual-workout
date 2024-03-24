@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Workout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style1.css') }}">  
+  
+    <!---we had linked our css file----->
+</head>
+
+<body background="{{url_for('static', filename='bg4.jpg')}}">
+    <div class="full-page" id="home">
+        <div class="navbar">
+            <div><a href='virtual.html'>Upperbody Exercises</a></div>
+            <nav>
+                <ul id='MenuItems'>
+                    
+                    <li><a href="{{ url_for('e1') }}">Barbell-Curls</a></li>
+                    <li><a href="{{ url_for('e2') }}">Tricep E_Z bar-extension</a></li>
+                    <li><a href="{{ url_for('e3') }}">Shoulder-press</a></li>
+                    <li><a href="{{ url_for('e4') }}">Fornt-chest Scoop Raise</a></li>
+                  
+                </ul>
+            </nav>
+   
+
+            </div>
+            </div>
+            </body>
+            </html>
